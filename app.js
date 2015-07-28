@@ -28,4 +28,11 @@ function($scope){
 		{title: 'post 5', upvotes: 4}
 	];
 	
-}]);
+}
+
+]);
+
+app.factory('posts', [
+	function(){
+	//service body
+	}]);
