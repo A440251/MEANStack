@@ -7,3 +7,4 @@ https://docs.angularjs.org/api/ng/filter
 
 By Angular conventions, lowerCamelCase is used for factory names that won't be new'ed.
 
+Use F12 to inspect a page and its elements.
