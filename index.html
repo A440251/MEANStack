@@ -21,7 +21,7 @@
         {{post.upvotes}}
 		<span class="glyphicon glyphicon-thumbs-down"
 		  ng-click="incrementDownvotes(post)"></span>
-		{{post.downvotes}}
+		{{post.downvotes}} <b>Total Votes:</b> {{post.totalvotes}}
         <span style="font-size:20px; margin-left:10px;">
           <a ng-show="post.link" href="{{post.link}}">
             {{post.title}}
