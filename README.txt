@@ -14,3 +14,6 @@ http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/
 
 Angular conventions:
 https://github.com/mgechev/angularjs-style-guide
+
+use `npm start` to start our application. This allows the website to be hosted at
+http://localhost:3000
