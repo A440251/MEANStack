@@ -1,16 +1,23 @@
-var app = angular.module('flapperNews', []);
+var app = angular.module('flapperNews', ['ui.router']);
 
-app.factory('posts', [function(){
-	var o = {
-		posts: []
-	};
-	return o;
+app.config([
+'$stateProvider',
+'$urlRouterProvider',
+function($stateProvider, $urlRouterProvider) {
+	$stateProvider
+		.state('home', {
+			url: '/home',
+			templateUrl: '/home.html',
+			controller: 'MainCtrl'
+		});
+	
+	$urlRouterProvider.otherwise('home');
 }]);
 
 app.controller('MainCtrl', [
 '$scope',
 'posts',
-function($scope){
+function($scope, posts){
 	$scope.addPost = function(){
 		if(!$scope.title || $scope.title === "") { 
 			return; 
@@ -35,6 +42,13 @@ function($scope){
 		post.totalvotes -= 1;
 	};
 	$scope.posts = posts.posts;
+	
+	app.factory('posts', [function(){
+	var o = {
+		posts: []
+	};
+	return o;
+}]);
 	
 	
 	/*[
